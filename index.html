@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Whatsapp Cloud Words</title>
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Pagina Principal</a>
+        </li>
+        <li>
+          <a href="instruction.html">¿Como Hago?</a>
+        </li>
+      </li>
+    </nav>
+  </header>
+  <body>
+    <div class="contenido">
+    <div class="centrar-input" id="centrar-input">
+      <label for="fileInput" class="boton-subir">📎 Subir chat</label>
+      <input type="file" id="fileInput">
+    </div>
+    <div id="contenedorNube"></div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.1.2/src/wordcloud2.min.js"></script>
+    <script src="index.js" defer></script>
+  </body>
+  <footer>
+    Owner and Creator: <a href="https://github.com/GMicheloni">Gianfranco Micheloni🤖</a>
+  </footer>
+</html>

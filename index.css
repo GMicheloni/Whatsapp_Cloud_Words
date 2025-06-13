@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(49, 47, 47);
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  background-color: #333;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido {
+  flex: 1; /* Hace que este div crezca y empuje el footer abajo */
+  text-align: center;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+#fileInput {
+  display: none; /* Oculta el input real */
+}
+
+.boton-subir {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton-subir:hover {
+  background-color: #388e3c;
+}
+
+.centrar-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* toma el alto disponible en .contenido */
+}
+
+ol {
+  background-color: aliceblue;
+}
+
+h2 {
+  color: aliceblue;
+}
