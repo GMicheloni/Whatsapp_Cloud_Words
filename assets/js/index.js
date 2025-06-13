@@ -9,22 +9,33 @@ function renderizar(top100) {
     document.getElementById("centrar-input").appendChild(canvas);
   }
 
-  const palabrasFormateadas = top100.map(([palabra, frecuencia]) => [
+  /* const palabrasFormateadas = top100.map(([palabra, frecuencia]) => [
     palabra,
     frecuencia,
+  ]); */
+
+  const totalFrecuencia = top100.reduce(
+    (acc, [, frecuencia]) => acc + frecuencia,
+    0
+  );
+
+  const listaPalabras = top100.map(([palabra, frecuencia]) => [
+    palabra,
+    Math.max((frecuencia / totalFrecuencia) * 100, 1), // evitamos tamaño 0
   ]);
 
+  console.log(listaPalabras);
   WordCloud(canvas, {
-    list: palabrasFormateadas,
-    gridSize: Math.round(800 / 50),
-    weightFactor: 3,
+    list: listaPalabras,
+    gridSize: 8,
+    weightFactor: 20, // multiplicador de tamaño
     fontFamily: "Impact",
-    color: () => `hsl(${Math.random() * 360}, 100%, 70%)`,
-    backgroundColor: "#222",
-    rotateRatio: 0.1,
-    minRotation: -Math.PI / 4,
-    maxRotation: Math.PI / 4,
+    color: "random-dark",
+    backgroundColor: "#fff",
+    rotateRatio: 0.2,
+    rotationSteps: 2,
     drawOutOfBound: false,
+    origin: [canvas.width / 2, canvas.height / 2],
   });
   document.getElementById("fileInput").style.display = "none";
   document.querySelector("label[for='fileInput']").style.display = "none";

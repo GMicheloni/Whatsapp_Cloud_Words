@@ -78,3 +78,9 @@ ol {
 h2 {
   color: aliceblue;
 }
+
+#wordcloud {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+}
